@@ -1387,6 +1387,7 @@ footer { width: 100%; background: #060606;}
 	width:90%;
 	margin-top:6px;
 	margin-left:5%;
+	font-family:"Open Sans", sans-serif;
 }
 
 .showsT {
@@ -1440,7 +1441,7 @@ footer { width: 100%; background: #060606;}
 
 .contactBlack {background-color:#060606;}
 
-.review {font-family:"Lato";font-weight:300;font-size:16px;margin:10px 0px 0px 10px;}
+.review {font-family:"Lato";font-weight:300;font-size:14px;margin:10px 0px 0px 10px;color:#757575;}
 
 .contentTitle {margin-top:30px;}
 .videos {margin-top:30px;padding-bottom:10px;border-bottom:1px solid white;}
