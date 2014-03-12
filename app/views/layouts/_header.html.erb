@@ -1,11 +1,11 @@
 <!-- Begin Navigation -->
-<nav class="clearfix">
-
-	<!-- Logo -->
+<% if controller.controller_name == 'home' && controller.action_name == 'index' %>
+<nav class="clearfix navie">
+	
 	<div class="logo">
-		<a id="top" href="#"><img id="logo" src="assets/logo.png" width="91" height="30" alt="Visia"></a>
+		<%= image_tag('logo.png') %>
 	</div>
-
+	
 	<!-- Mobile Nav Button -->
 	<button type="button" class="nav-button" data-toggle="collapse" data-target=".nav-content">
       <span class="icon-bar"></span>
@@ -14,15 +14,30 @@
     </button>
 
     <!-- Navigation Links -->
-    <div class="navigation">
-		<ul class="nav-content">
-			<li><a class="active" href="#section1">Hello</a></li>
-			<li><a href="#section2">About</a></li>
-			<li><a href="#section3">Services</a></li>
-			<li><a href="#section4">Folio</a></li>
-			<li><a href="#section5">Team</a></li>
-		</ul>
+    	<div class="navigation">
+			<ul class="nav-content">
+				<li><a href="#section2">Releases</a></li>
+				<li><a href="#section3">Videos</a></li>
+				<li><a href="#section4">Shows</a></li>
+				<li><a href="#section5">Contact</a></li>
+			</ul>
+		</div>
+	<%# if user_signed_in? %>
+		<!--<div class="userInfo">
+			<div>{ Logged in as <strong><%#= current_user.email %></strong> }</div>
+			<div class="deviseLinks"><%#= link_to 'Edit', edit_user_registration_path %> | <%#= link_to 'Logout', destroy_user_session_path, method: :delete %></div>
+		</div>-->
+	<%# end %>
+	
+	
+	<div class="grid-full dark">
+		<%# if user_signed_in? %>
+			<%#= link_to "manage content", cms_path, class: "button2" %>
+		<%# end %>
 	</div>
-
+	
 </nav>
 <!-- End Navigation -->
+<% else %>
+	<div class="navigation-alt">&nbsp;</div>
+<% end %>
