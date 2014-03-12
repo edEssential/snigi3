@@ -7,7 +7,9 @@ class VideosController < ApplicationController
 
     def create
       @video = Video.create(params[:video])
-      render :json => @video
+      respond_to do |format|
+        format.html { redirect_to cms_path }
+      end
     end
 
     def show
