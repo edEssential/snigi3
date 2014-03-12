@@ -1,10 +1,22 @@
 Snigiv3::Application.routes.draw do
   
+  devise_for :users, path: "auth", path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'create_new_snigi' }
+
   root :to => 'home#index'
   
   match 'releases/release_show_via_ajax_call' => 'releases#release_show_via_ajax_call'
   
   resources :releases
+  resources :videos
+  resources :shows
+  resources :info
+  resources :contacts
+  resources :cms
+  resources :home
+  
+  match "contacts_xls" => 'cms#contacts_xls'
+  
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

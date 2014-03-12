@@ -1,0 +1,26 @@
+<section class="parallax-bg2 parallax colored clearfix marginUp">
+	<div class="content dark padded container">
+		
+		<div class="title grid-full">
+			<h2>Add/edit your show content here</h2>
+			<span class="border"></span>
+		</div>
+
+		<div class="formWrapper">	
+			<%= form_for(@show) do |f| %>
+				<%= f.label :date, class: "formText" %><br/>
+	    		<%= f.text_field :date, class: 'email text-area' %><br /><br />
+				<%= f.label :city, class: "formText" %><br />
+	    		<%= f.text_field :location, class: 'email text-area' %><br /><br />
+				<%= f.label :venue, class: "formText" %><br />
+	    		<%= f.text_field :venue, class: 'email text-area' %><br /><br />
+				<%= f.label :Who_performing?, class: "formText" %><br />
+	    		<%= f.text_field :artist, class: 'email text-area'  %><br /><br />
+	    		<%= f.label :Ticket_link, class: "formText" %><br/>
+	    		<%= f.text_field :buylink, class: 'email text-area' %><br /><br />
+	    		<%= f.submit %>
+			<% end %>
+		</div>
+
+		
+</section>

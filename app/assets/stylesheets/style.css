@@ -131,6 +131,7 @@ a, a:visited { font-weight: 400; text-decoration: none; }
 	border-radius: 3px;
 		-webkit-border-radius: 3px;
 		-moz-border-radius: 3px;
+		z-index:1000;
 }
 
 .buttonForm {border:none!important;}
@@ -1424,6 +1425,16 @@ footer { width: 100%; background: #060606;}
 	padding-bottom:75px;
 }
 
+.heightFixer {height:100%;}
+
+.paddedBottom {
+	padding-bottom:155px;
+}
+
+.paddedBottom2 {
+	padding-bottom:185px;
+}
+
 .padded4 {
 	padding-bottom:40px;
 }
@@ -1431,6 +1442,9 @@ footer { width: 100%; background: #060606;}
 .contactBlack {background-color:#060606;}
 
 .review {font-family:"futura-pt";font-size:16px;margin:10px 0px 0px 10px;}
+
+.contentTitle {margin-top:30px;}
+.videos {margin-top:30px;padding-bottom:10px;border-bottom:1px solid white;}
 
 
 /* =Media
@@ -1545,6 +1559,8 @@ footer { width: 100%; background: #060606;}
 		margin-left:0%;
 	}
 	h2 {font-size: 24px !important;}
+	.closeRelease {width:26px;position:absolute;margin:20px 0px 0px 47%;z-index:1000;}
+	#releaseShowWrapper {height:560px;padding-top:-10px;}
 	
 }
 
@@ -1572,6 +1588,8 @@ footer { width: 100%; background: #060606;}
 		margin-left:0%;
 	}
 	h2 {font-size: 20px !important;}
+	.closeRelease {width:26px;position:absolute;margin:20px 0px 0px 46.5%;z-index:1000;}
+	#releaseShowWrapper {height:620px;padding-top:-10px;}
 }
 
 

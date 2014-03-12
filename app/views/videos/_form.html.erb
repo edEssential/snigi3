@@ -1,0 +1,20 @@
+<section class="parallax-bg2 parallax colored clearfix marginUp paddedBottom2">
+	<div class="content dark padded container">
+		
+		<div class="title grid-full">
+			<h2>Add/edit your video content here</h2>
+			<span class="border"></span>
+		</div>
+
+		<div class="formWrapper">	
+			<%= form_for(@video) do |f| %>
+				<%= f.label :title, class: "formText" %><br/>
+	    		<%= f.text_field :title, class: 'email text-area' %><br /><br />
+				<%= f.label :URL, class: "formText" %><br />
+	    		<%= f.text_field :url, class: 'email text-area' %><br /><br />
+	    		<%= f.submit %>
+			<% end %>
+		</div>
+
+		
+</section>

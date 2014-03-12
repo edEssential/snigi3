@@ -17,6 +17,9 @@
 
 jQuery(document).ready(function() {
 	
+	//// Preloader, hide all page content until window.load
+	jQuery('.loadingGif').show();
+	
 	//// Detect click from releases view and generate correct release display
 	jQuery(".releaseClick").click(function() {
 		
@@ -43,4 +46,17 @@ jQuery(document).ready(function() {
 		});
 	});
 	
+	//// Contact form submission and callback
+	jQuery( "#contact-submit" ).click(function() {
+		jQuery(".contactTitle").fadeOut(500, function() {
+			jQuery(this).html("Thanks for getting in touch!").fadeIn(1000);
+		 });
+	});
+	
+});
+
+//// Load page content once it has been preloaded
+jQuery(window).load(function() {
+	jQuery('.loadingGif').hide();
+  	jQuery('.body').fadeIn(300);
 });

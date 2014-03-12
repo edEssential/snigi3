@@ -1,5 +1,5 @@
 class ReleasesController < ApplicationController
-  #before_filter :authenticate_user!, except: [:release_show_via_ajax_call]
+  before_filter :authenticate_user!, except: [:release_show_via_ajax_call]
 
   def new
     @release = Release.new
@@ -8,13 +8,13 @@ class ReleasesController < ApplicationController
   def create
     @release = Release.create(params[:release])
     respond_to do |format|
-      format.html { redirect_to root_path }
+      format.html { redirect_to cms_path }
     end
   end
 
   def show
     respond_to do |format|
-      format.html { redirect_to root_path }
+      format.html { redirect_to cms_path }
     end
   end
   
@@ -26,7 +26,7 @@ class ReleasesController < ApplicationController
   def index
     @release = Release.all
     respond_to do |format|
-      format.html { redirect_to root_path }
+      format.html { redirect_to cms_path }
     end
   end
 
@@ -36,8 +36,13 @@ class ReleasesController < ApplicationController
 
   def update   
     @release = Release.find(params[:id])
-    @release.update_attributes(params[:release])
-    render :json => @release
+    if @release.update_attributes(params[:release])
+      respond_to do |format|
+       format.html { redirect_to cms_path }
+      end
+    else
+      render :action => 'edit'
+    end
   end
   
   def send_object_via_ajax
@@ -50,7 +55,7 @@ class ReleasesController < ApplicationController
     @release = Release.find(params[:id])
     @release.destroy
     respond_to do |format|
-      format.html { redirect_to root_path }
+      format.html { redirect_to cms_path }
     end
   end
   

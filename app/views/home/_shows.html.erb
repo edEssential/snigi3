@@ -1,0 +1,29 @@
+<!-- Begin Shows -->
+<section id="section4" class="content container">
+	<div class="title grid-full">
+		<h2>Shows</h2>
+		<span class="border"></span>
+	</div>
+	<div class="shortcode grid-full">
+		<h3 class="contentTitle">Upcoming Shows</h3>
+		<div class="grid-full show">
+			<table class="showTable">
+				<% if @upcoming_shows.count <= 0 %>
+					<tr><td>There are no upcoming shows at this time. Please check back here regularly for news of all forthcoming shows.</td></tr>
+				<% else %>
+					<%= render partial: "show", collection: @upcoming_shows.sort_by(&:date), as: :s %>
+				<% end%>
+			</table>
+		</div>
+	</div>
+	<div class="shortcode grid-full marginBottom">
+		<h3 class="contentTitle">Past Shows</h3>
+		<div class="grid-full show">
+			<table class="showTable">
+				<%= render partial: "show", collection: @past_shows, as: :s %>
+			</table>
+		</div>
+	</div>
+	<%#= link_to image_tag('team.jpg', :class => "animated slide", :alt => "songkick"), "http://google.com" %>
+</section>
+<!-- End Shows -->

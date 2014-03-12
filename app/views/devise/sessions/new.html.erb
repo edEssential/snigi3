@@ -1,0 +1,25 @@
+<section class="parallax-bg2 parallax colored clearfix marginUp paddedBottom">
+	<div class="content dark padded container">
+		
+		<div class="title grid-full">
+			<h2 class="bigger">Sign in</h2>
+			<span class="border"></span>
+		</div>
+
+		<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+			<div class="formWrapper">	
+				<%= devise_error_messages! %>
+				<%= f.label :email, class: "formText" %><br/>
+    			<%= f.email_field :email, class: 'email text-area' %><br /><br />
+				<%= f.label :password, class: "formText" %><br/>
+    			<%= f.password_field :password, class: 'email text-area' %><br /><br />
+				<% if devise_mapping.rememberable? -%>
+			    	<div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+				<% end -%>
+			</div>
+			<div class="title grid-full">
+				<%= f.submit "Sign in", class: "darkButton3" %><br/><br/>
+			</div>
+		<% end %>
+	</div>
+</section>

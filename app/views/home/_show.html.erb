@@ -1,0 +1,12 @@
+<tr class="showsT">
+	<td width="12%" class="yearS"><%= s.date.year %></td>
+	<td width="14%" class="monthS"><%= s.date.to_formatted_s(:short) %></td>
+	<td width="20%" class="locationS"><%= s.location %></td>
+	<td width="22%" class="venueS"><%= s.venue %></td>
+	<td width="22%" class="artistS"><%= s.artist.titleize %></td>
+	<% if s.buylink? && s.date >= Date.today %>
+		<td width="5%" class="ticket"><%= link_to image_tag("ticket.png"), s.buylink %></td>
+	<% else %>
+		<td width="5%" class="ticket"><%= image_tag("no-ticket.png") %></td>
+	<% end %>
+</tr>

@@ -37,42 +37,18 @@
 
 </head>
 
-<body class="royal_loader">
-
-	<%= render 'layouts/header' %>
-	<%= yield %>
-	<%= render 'layouts/footer' %>
-
-	<!-- Javascript -->
-	<%= javascript_include_tag "royal-preloader" %>
-	<script type="text/javascript">
-
-		//Replace with your own image's paths
-	   var images = {
-	        'parallax1':    'http://www.aetherthemes.com/demo/visia/images/hero.jpg',
-	        'parallax2':    'http://www.aetherthemes.com/demo/visia/images/services-red.jpg',
-	        'parallax3':    'http://www.aetherthemes.com/demo/visia/images/clients.jpg',
-	        'About Us': 	'http://www.aetherthemes.com/demo/visia/images/about.jpg',
-	        'Team':     	'http://www.aetherthemes.com/demo/visia/images/team.jpg',
-	        'Thumb1':   	'http://www.aetherthemes.com/demo/visia/images/thumbnails/project1.jpg',
-	        'Thumb2':   	'http://www.aetherthemes.com/demo/visia/images/thumbnails/project2.jpg',
-	        'Thumb3':   	'http://www.aetherthemes.com/demo/visia/images/thumbnails/project3.jpg',
-	        'Thumb4':   	'http://www.aetherthemes.com/demo/visia/images/thumbnails/project4.jpg',
-	        'Thumb5':   	'http://www.aetherthemes.com/demo/visia/images/thumbnails/project5.jpg',
-	        'Thumb6':   	'http://www.aetherthemes.com/demo/visia/images/thumbnails/project6.jpg',
-	        'Thumb7':   	'http://www.aetherthemes.com/demo/visia/images/thumbnails/project7.jpg',
-	        'Thumb8':   	'http://www.aetherthemes.com/demo/visia/images/thumbnails/project8.jpg'
-	    };
-	 
-	    // config
-	    Royal_Preloader.config({
-	        mode:       'number',
-	        images:     images,
-	        timeout:    10,
-	        showInfo:   false,
-	        background: ['#ffffff']
-	    });
-	</script>
+<body>
+	
+	<div class="loadingGif">
+		<h1 class="loading">Loading</h1>
+		<div class="gif"><%= image_tag('loadingAlt.gif') %></div>
+	</div>
+	
+	<div class="body" style="display:none;">
+		<%= render 'layouts/header' %>
+		<%= yield %>
+		<%= render 'layouts/footer' %>
+	</div>
 	
 	<%= javascript_include_tag "visia" %>
 
