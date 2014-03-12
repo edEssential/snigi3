@@ -1,0 +1,44 @@
+<!-- Begin Portfolio -->
+<section id="section2" class="portfolio clearfix">
+
+	<!-- Title -->
+	<div class="content container">
+		<div class="title grid-full">
+			<h2>Releases</h2>
+			<span class="border"></span>
+		</div>
+	</div>
+	
+	<div id="releaseShowWrapper" style="display:none;">
+	
+		<div class="closeRelease">
+			<a data-remote="true" href="#" id="removeRelease"><i class="icon-remove"></i></a>               
+		</div>
+		<div class="ajax-content clearfix"></div>
+	
+		<div id="releaseShowContent">
+		</div>
+	
+	</div>
+
+	<!-- Thumbnails -->
+	<ul id="portfolio-grid" class="projectlist clearfix">
+		<% @releases.each do |r| %>
+			<li class="project">
+				<input type="hidden" value=<%= r.id %> class="modal-object-id">
+				<%= link_to '#', :remote => 'true', :class => 'releaseClick' do %>
+					<%= image_tag r.packshot.url(:medium, :alt => "thumbnail") %>
+					<div class="projectinfo">
+						<div class="meta">
+							<h4><%= r.artist %></h4>
+							<h6><em><%= r.title.downcase %></em></h6>
+						</div>
+					</div>
+				<% end %>
+			</li>
+		<% end %>
+	</ul>
+
+
+</section>
+<!-- End Portfolio -->

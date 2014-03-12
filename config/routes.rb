@@ -1,6 +1,10 @@
 Snigiv3::Application.routes.draw do
   
   root :to => 'home#index'
+  
+  match 'releases/release_show_via_ajax_call' => 'releases#release_show_via_ajax_call'
+  
+  resources :releases
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

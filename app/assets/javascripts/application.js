@@ -12,7 +12,35 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require mustache
+//= require_tree ../../templates
 
 jQuery(document).ready(function() {
+	
+	//// Detect click from releases view and generate correct release display
+	jQuery(".releaseClick").click(function() {
+		
+		var id = jQuery(this).prev('.modal-object-id').val();
+		console.log(id);
+		
+		jQuery.ajax({
+			dataType: "json",
+			url: "./releases/release_show_via_ajax_call",
+			data: {id: id},
+			success: function(data) {
+				var release_content = SMT['releaseshow'](data);
+				jQuery('#releaseShowWrapper').show(function(){
+					jQuery('#releaseShowContent').empty().hide().append(release_content).fadeIn(700);
+				});
+			}
+		});
+	});
+	//// Close release display on icon click
+	jQuery('#removeRelease').click(function() {
+		jQuery('#releaseShowWrapper').fadeOut(500, function(){
+			jQuery("#releaseShowWrapper").hide();
+			jQuery("#releaseShowContent").empty();
+		});
+	});
 	
 });
