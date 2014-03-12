@@ -1589,7 +1589,8 @@ footer { width: 100%; background: #060606;}
 	}
 	h2 {font-size: 20px !important;}
 	.closeRelease {width:26px;position:absolute;margin:20px 0px 0px 46.5%;z-index:1000;}
-	#releaseShowWrapper {height:620px;padding-top:-10px;}
+	#releaseShowWrapper {height:660px;padding-top:-10px;}
+	.contactFormWrapper {height:300px;}
 }
 
 

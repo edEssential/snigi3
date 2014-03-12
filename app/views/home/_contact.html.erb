@@ -12,6 +12,8 @@
 			<span class="border"></span>
 		</div>
 		
+		<div class="contactFormWrapper">
+		
 		<div class="grid-full contactForm">	
 			<%= form_for(@contact, remote: true) do |f| %>
 				<div class="contactEmail grid-half">
@@ -25,6 +27,8 @@
 				</div>
 	    		<div class="grid-full"><%= f.submit "Send message", class: "button4", id: "contact-submit" %></div>
 			<% end %>
+		</div>
+		
 		</div>
 		
 	</div>

@@ -34,6 +34,7 @@ jQuery(document).ready(function() {
 				var release_content = SMT['releaseshow'](data);
 				jQuery('#releaseShowWrapper').show(function(){
 					jQuery('#releaseShowContent').empty().hide().append(release_content).fadeIn(700);
+					jQuery('body').scrollTop(1000);
 				});
 			}
 		});
@@ -50,6 +51,7 @@ jQuery(document).ready(function() {
 	jQuery( "#contact-submit" ).click(function() {
 		jQuery(".contactTitle").fadeOut(500, function() {
 			jQuery(this).html("Thanks for getting in touch!").fadeIn(1000);
+			jQuery(".contactForm").empty().append("<h3>I'll get back to you soon</h3>");
 		 });
 	});
 	
