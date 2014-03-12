@@ -5,6 +5,7 @@ gem 'rails', '3.2.13'
 gem 'paperclip'
 gem 'aws-sdk'
 gem "auto_html"
+gem 'newrelic_rpm'
 gem 'devise'
 gem 'csv_builder'
 gem 'sass-rails',   '~> 3.2.3'
