@@ -21,10 +21,10 @@ a:hover {
 	border-radius: 5px;
 }
 .tableContent {padding:20px 20px;}
-.tableHeader {height:45px;font-family:"futura-pt", "futura";color:#f5f5f5;letter-spacing:1px;}
+.tableHeader {height:45px;font-family:"futura", "Lato";color:#f5f5f5;letter-spacing:1px;}
 .ruler {position:absolute;width:86.2%;margin-top:22px;}
 .tableRow {font-family:helvetica, sans-serif;height:20px;color:#f5f5f5;font-weight:600;}
-.empty {font-family:"futura-pt", "futura";font-weight:400;}
+.empty {font-family:"futura", "Lato";font-weight:400;}
 .tableRow img {max-width:15px;margin-top:-3px;}
 .darkButton2, .darkButton3, .button2 {
 	float:left;clear:both;

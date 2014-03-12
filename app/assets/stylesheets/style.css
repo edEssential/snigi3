@@ -343,8 +343,7 @@ a, a:visited { font-weight: 400; text-decoration: none; }
 	color: #ffffff;
 	text-transform: lowercase;
 	font-size: 1em;
-	font-family:"futura-pt";
-	font-weight:300;
+	font-family:"Lato";
 
 }
 
@@ -1441,7 +1440,7 @@ footer { width: 100%; background: #060606;}
 
 .contactBlack {background-color:#060606;}
 
-.review {font-family:"futura-pt";font-size:16px;margin:10px 0px 0px 10px;}
+.review {font-family:"Lato";font-weight:300;font-size:16px;margin:10px 0px 0px 10px;}
 
 .contentTitle {margin-top:30px;}
 .videos {margin-top:30px;padding-bottom:10px;border-bottom:1px solid white;}
