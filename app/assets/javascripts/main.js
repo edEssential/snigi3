@@ -15,7 +15,7 @@ function initializeVisia() {
 
 	//LOCAL SCROLL
 	jQuery('.navigation, .call-to-action').localScroll({
-		offset: -50
+		offset: 60
 	});
 
 	jQuery("#top").click(function () {
