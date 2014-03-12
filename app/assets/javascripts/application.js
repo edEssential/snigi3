@@ -52,6 +52,7 @@ jQuery(document).ready(function() {
 		jQuery(".contactTitle").fadeOut(500, function() {
 			jQuery(this).html("Thanks for getting in touch!").fadeIn(1000);
 			jQuery(".contactForm").empty().append("<h3>I'll get back to you soon</h3>");
+			document.getElementById('contactHeader').scrollIntoView(true);
 		 });
 	});
 	
