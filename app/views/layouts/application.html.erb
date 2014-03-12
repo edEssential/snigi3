@@ -27,13 +27,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
 
 	<!-- Stylesheets -->
-	<link rel="stylesheet" type="text/css" href="assets/loader.css">
-
-	<link rel="stylesheet" type="text/css" href="assets/reset.css">
-	<link rel="stylesheet" type="text/css" href="assets/grid.css">
-	<link rel="stylesheet" type="text/css" href="assets/style.css">
-	<link rel="stylesheet" type="text/css" href="assets/colors.css">
-	<link rel="stylesheet" type="text/css" href="assets/animations.css">
+	<%= stylesheet_link_tag "application", :media => "all" %>
 
 	<!--[if lt IE 9]>
 		<link rel="stylesheet" type="text/css" href="assets/ie.css" />
@@ -48,7 +42,7 @@
 	<%= render 'layouts/footer' %>
 
 	<!-- Javascript -->
-	<script src="assets/royal-preloader.js" type="text/javascript" charset="utf-8"></script>
+	<%= javascript_include_tag "royal-preloader" %>
 	<script type="text/javascript">
 
 		//Replace with your own image's paths
@@ -77,22 +71,8 @@
 	        background: ['#ffffff']
 	    });
 	</script>
-	<script src="assets/retina.js" type="text/javascript" charset="utf-8"></script>
-	<script src="assets/smoothscroll.js" type="text/javascript" charset="utf-8"></script>
-	<script src="assets/waypoints.js" type="text/javascript" charset="utf-8"></script>
-	<script src="assets/parallax.js" type="text/javascript" charset="utf-8"></script>
-	<script src="assets/navigation.js" type="text/javascript" charset="utf-8"></script>
-	<script src="assets/jquery.mixitup.js" type="text/javascript" charset="utf-8"></script>
-	<script src="assets/jquery.easing.js" type="text/javascript" charset="utf-8"></script>
-	<script src="assets/jquery.fittext.js" type="text/javascript" charset="utf-8"></script>
-	<script src="assets/jquery.localscroll.js" type="text/javascript" charset="utf-8"></script>
-	<script src="assets/jquery.scrollto.js" type="text/javascript" charset="utf-8"></script>
-	<script src="assets/jquery.appear.js" type="text/javascript" charset="utf-8"></script>
-	<script src="assets/jquery.waitforimages.js" type="text/javascript" charset="utf-8"></script>
-	<script src="assets/jquery.bxslider.js" type="text/javascript" charset="utf-8"></script>
-	<script src="assets/jquery.fitvids.js" type="text/javascript" charset="utf-8"></script>
-	<script src="assets/main.js" type="text/javascript" charset="utf-8"></script>
-	<script src="assets/shortcodes.js" type="text/javascript" charset="utf-8"></script>
+	
+	<%= javascript_include_tag "visia" %>
 
 </body>
 
