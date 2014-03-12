@@ -34,7 +34,7 @@ jQuery(document).ready(function() {
 				var release_content = SMT['releaseshow'](data);
 				jQuery('#releaseShowWrapper').show(function(){
 					jQuery('#releaseShowContent').empty().hide().append(release_content).fadeIn(700);
-					jQuery('body').scrollTop(1000);
+					document.getElementById('releaseHeader').scrollIntoView(true);
 				});
 			}
 		});
