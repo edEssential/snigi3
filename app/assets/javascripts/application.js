@@ -42,11 +42,10 @@ jQuery(document).ready(function() {
 			url: "./releases/release_show_via_ajax_call",
 			data: {id: id},
 			success: function(data) {
-				var padder = document.getElementById('releaseHeader');
 				var release_content = SMT['releaseshow'](data);
 				jQuery('#releaseShowWrapper').show(function(){
 					jQuery('#releaseShowContent').empty().hide().append(release_content).fadeIn(700);
-					padder.scrollIntoView(true);
+					jQuery(this).prev('.container').scrollTop();
 				});
 			}
 		});
