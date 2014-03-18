@@ -47,9 +47,6 @@ jQuery(document).ready(function() {
 				jQuery('#releaseShowWrapper').show(function(){
 					jQuery('#releaseShowContent').empty().hide().append(release_content).fadeIn(700);
 					padder.scrollIntoView(true);
-					jQuery('#releaseHeader').css({
-						"margin-top" : 55 + "px"
-					});
 				});
 			}
 		});
@@ -59,9 +56,6 @@ jQuery(document).ready(function() {
 		jQuery('#releaseShowWrapper').fadeOut(500, function(){
 			jQuery("#releaseShowWrapper").hide();
 			jQuery("#releaseShowContent").empty();
-			jQuery('#releaseHeader').css({
-				"margin-top" : 0 + "px"
-			});
 		});
 	});
 	
