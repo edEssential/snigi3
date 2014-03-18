@@ -7,9 +7,9 @@
 .contactFieldArea {height:220px;padding:20px 0px 0px 20px;}
 .button4 {
 	letter-spacing:0.1em;
-	margin-top:10px;
+	margin-top	:10px;
 	padding: 9px 23px;
-	right:25px;
+	right:0px;
 	top:440px;
 	width:200px;
 	height:50px;
@@ -25,6 +25,16 @@
 	
 .button4 {
 	height:50px !important;
+	margin:0px;
 }
   
+}
+
+@media screen and (max-width: 479px) {
+
+.button4 {
+	position:absolute;
+	top:560px; left:22%;
+}
+	
 }
