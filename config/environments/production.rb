@@ -87,13 +87,10 @@ Snigiv3::Application.configure do
     
   ActionMailer::Base.delivery_method = :smtp
   
-  config.action_mailer.perform_deliveries = true
-  config.action_mailer.raise_delivery_errors = true
-  
-  config.middleware.use ExceptionNotifier,
-  :email => {
-    :email_prefix => "[Exception] ",
-    :sender_address => %{"notifier" <error@annarosecarter.com>},
-    :exception_recipients => %w{ed_hamilton@live.com}
-  }
+  config.middleware.use ExceptionNotification::Rack,
+    :email => {
+      :email_prefix => "[Exception error] ",
+      :sender_address => %{"notifier" <errors@annarosecarter.com>},
+      :exception_recipients => %w{ed_hamilton@live.com}
+    }
 end
