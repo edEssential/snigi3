@@ -107,4 +107,5 @@
 	border-bottom:1px solid gray;
 }
 .boldBig {font-size:18px;font-weight:800;padding-right:10px;}
-.percentage {position:absolute;margin:-24px 0px 0px 112px;}
+.percentage {position:absolute;margin:-25px 0px 0px 118px;}
+.percentage img {max-width:25px;}

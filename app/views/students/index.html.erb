@@ -33,7 +33,13 @@
 								<td><%= s.name %></td>
 								<td class="hr"><%= s.resting_hr_1 %></td>
 								<td><%= s.after_happy_hr %></td>
-								<td><span class="boldBig"><%= percentage_change %><span><div class="percentage"><%= image_tag('percentage.png') %></div></td>			
+								<% if percentage_change >= 0 %>
+									<td><span class="boldBig"><%= percentage_change %><span>
+									<div class="percentage"><%= image_tag('percentageUp.png') %></div></td>
+								<% else %>
+									<td><span class="boldBig"><%= percentage_change.abs %><span>
+									<div class="percentage"><%= image_tag('percentageDown.png') %></div>
+								<% end %>			
 							</tr>
 						<% end %>
 					</tbody>
@@ -66,7 +72,13 @@
 								<td><%= s.name %></td>
 								<td class="hr"><%= s.resting_hr_2 %></td>
 								<td><%= s.after_sad_hr %></td>
-								<td><span class="boldBig"><%= percentage_change %><span><div class="percentage"><%= image_tag('percentage.png') %></div></td>		
+								<% if percentage_change >= 0 %>
+									<td><span class="boldBig"><%= percentage_change %><span>
+									<div class="percentage"><%= image_tag('percentageUp.png') %></div></td>
+								<% else %>
+									<td><span class="boldBig"><%= percentage_change.abs %><span>
+									<div class="percentage"><%= image_tag('percentageDown.png') %></div>
+								<% end %>		
 							</tr>
 						<% end %>
 					</tbody>
