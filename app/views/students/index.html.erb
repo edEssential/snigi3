@@ -1,0 +1,79 @@
+<section class="parallax clearfix">
+	<div class="content light padded container">
+		
+		<div class="title grid-full">
+			<h2>Students</h2>
+			<span class="border"></span>
+			<br/><br/>
+			<h6><%= link_to 'BACK', root_path, :class => "button" %></h6><br /><br /><br /><br />
+			
+			<div id="main">
+				<div class="tableHeader">Happy</div>
+				<table class="features-table">
+					<thead>
+						<tr>
+							<td>Student Name</td>
+							<td>Resting Heart Rate</td>
+							<td>Heart Rate After</td>
+							<td>Percentage Change</td>
+						</tr>
+					</thead>
+					<!--<tfoot>
+						<tr>
+							<td></td>
+							<td>$99</td>
+							<td>$199</td>
+							<td>$399</td>
+						</tr>
+					</tfoot>-->					
+					<tbody>
+						<% @students.each do |s| %>
+							<% percentage_change = (Float(s.after_happy_hr.to_i - s.resting_hr_1.to_i) / s.resting_hr_1.to_i * 100).ceil %>
+							<tr>
+								<td><%= s.name %></td>
+								<td class="hr"><%= s.resting_hr_1 %></td>
+								<td><%= s.after_happy_hr %></td>
+								<td><span class="boldBig"><%= percentage_change %><span><div class="percentage"><%= image_tag('percentage.png') %></div></td>			
+							</tr>
+						<% end %>
+					</tbody>
+				</table>
+			</div>
+			<br/><br/>
+			<div id="main">
+				<div class="tableHeader">Sad</div>
+				<table class="features-table">
+					<thead>
+						<tr>
+							<td>Student Name</td>
+							<td>Resting Heart Rate</td>
+							<td>Heart Rate After</td>
+							<td>Percentage Change</td>
+						</tr>
+					</thead>
+					<!--<tfoot>
+						<tr>
+							<td></td>
+							<td>$99</td>
+							<td>$199</td>
+							<td>$399</td>
+						</tr>
+					</tfoot>-->					
+					<tbody>
+						<% @students.each do |s| %>
+							<% percentage_change = (Float(s.after_sad_hr.to_i - s.resting_hr_2.to_i) / s.resting_hr_2.to_i * 100).ceil %>
+							<tr>
+								<td><%= s.name %></td>
+								<td class="hr"><%= s.resting_hr_2 %></td>
+								<td><%= s.after_sad_hr %></td>
+								<td><span class="boldBig"><%= percentage_change %><span><div class="percentage"><%= image_tag('percentage.png') %></div></td>		
+							</tr>
+						<% end %>
+					</tbody>
+				</table>
+			</div>	
+				
+		</div>
+		
+	</div>	
+</section>

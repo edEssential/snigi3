@@ -13,6 +13,7 @@ Snigiv3::Application.routes.draw do
   resources :contacts
   resources :cms
   resources :home
+  resources :students
   
   match "contacts_xls" => 'cms#contacts_xls'
   

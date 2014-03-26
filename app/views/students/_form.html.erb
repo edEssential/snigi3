@@ -1,0 +1,28 @@
+<section class="parallax-bg2 parallax colored clearfix marginUp">
+	<div class="content dark padded container">
+		
+		<div class="title grid-full">
+			<h2>Add/edit your student content here</h2>
+			<span class="border"></span>
+		</div>
+
+		<div class="formWrapper">	
+			<%= form_for(@student) do |f| %>
+				<%= f.label :name, class: "formText" %><br/>
+	    		<%= f.text_field :name, class: 'email text-area' %><br /><br />
+				<%= f.label :gender, class: "formText" %><br />
+	    		<%= f.text_field :gender, class: 'email text-area' %><br /><br />
+				<%= f.label :heart_rate_before_happy, class: "formText" %><br />
+	    		<%= f.text_field :resting_hr_1, class: 'email text-area' %><br /><br />
+				<%= f.label :heart_rate_after_happy?, class: "formText" %><br />
+	    		<%= f.text_field :after_happy_hr, class: 'email text-area'  %><br /><br />
+	    		<%= f.label :heart_rate_before_sad, class: "formText" %><br/>
+	    		<%= f.text_field :resting_hr_2, class: 'email text-area' %><br /><br />
+				<%= f.label :heart_rate_after_sad, class: "formText" %><br/>
+	    		<%= f.text_field :after_sad_hr, class: 'email text-area' %><br /><br />
+	    		<%= f.submit %>
+			<% end %>
+		</div>
+
+		
+</section>

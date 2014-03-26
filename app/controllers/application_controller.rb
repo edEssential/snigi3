@@ -10,6 +10,7 @@ class ApplicationController < ActionController::Base
     @contacts = Contact.all
     @admin = Contact.first
     @shows = Show.all
+    @students = Student.all
   end
   
 end
