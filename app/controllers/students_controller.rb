@@ -19,7 +19,7 @@ class StudentsController < ApplicationController
   end
 
   def index
-    @students = Student.all
+    @students = Student.order("gender DESC")
     respond_to do |format|
       format.html
     end
