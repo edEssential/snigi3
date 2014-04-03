@@ -5,11 +5,14 @@
 			<h2>Students</h2>
 			<span class="border"></span>
 			<br/><br/>
-			<h6><%= link_to 'BACK', root_path, :class => "button" %></h6><br /><br /><br /><br />
+			<% if user_signed_in? %>
+				<h6><%= link_to 'BACK TO CMS', cms_path, :class => "button" %>
+			<% end %>
+				</h6><h6><%= link_to 'BACK TO SITE', root_path, :class => "button" %></h6><br /><br /><br /><br />
 			
 			<div id="main">
 				<div class="tableHeader2">Happy</div>
-				<table class="features-table">
+				<table class="features-table" id="datatable">
 					<thead>
 						<tr>
 							<td>Student Name</td>
@@ -84,7 +87,7 @@
 					</tbody>
 				</table>
 			</div>	
-				
+
 		</div>
 		
 	</div>	

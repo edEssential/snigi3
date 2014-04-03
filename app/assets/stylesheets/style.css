@@ -36,9 +36,10 @@ Author URI: http://www.aetherthemes.com
 	margin:100px auto 0px auto;
 }
 .gif {
-	width:98px;
-	margin:10% auto 0px auto;
+	width:3.5%;
+	margin:20% auto 40% auto;
 }
+.gif img {max-width:100%;}
 
 body { 
 	background: #fff;
@@ -1445,7 +1446,6 @@ footer { width: 100%; background: #060606;}
 
 .contentTitle {margin-top:30px;}
 .videos {margin-top:30px;padding-bottom:10px;border-bottom:1px solid white;}
-.padderMe {padding-top:0px;}
 
 
 /* =Media

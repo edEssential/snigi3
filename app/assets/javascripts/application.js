@@ -35,18 +35,19 @@ jQuery(document).ready(function() {
 	jQuery(".releaseClick").click(function() {
 		
 		var id = jQuery(this).prev('.modal-object-id').val();
-		console.log(id);
+		var releasesPosition = jQuery("#section2").scrollTop();
+		
+		console.log(releasesPosition);
 		
 		jQuery.ajax({
 			dataType: "json",
 			url: "./releases/release_show_via_ajax_call",
 			data: {id: id},
 			success: function(data) {
-				var padder = document.getElementById('section2');
 				var release_content = SMT['releaseshow'](data);
+				jQuery(window).scrollTo('#section2', {duration:200, offset:45});
 				jQuery('#releaseShowWrapper').show(function(){
 					jQuery('#releaseShowContent').empty().hide().append(release_content).fadeIn(700);
-					padder.scrollIntoView(true);
 				});
 			}
 		});
