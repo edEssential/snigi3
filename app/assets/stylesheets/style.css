@@ -565,7 +565,7 @@ a, a:visited { font-weight: 400; text-decoration: none; }
 }
 
 .closeRelease {width:26px;position:absolute;margin:20px 0px 0px 49.3%;z-index:1000;}
-#releaseShowWrapper {height:480px;padding-top:-10px;}
+#releaseShowWrapper {height:100%;padding-top:0px;}
 
 .small-border {
 	display: block;
@@ -1561,7 +1561,6 @@ footer { width: 100%; background: #060606;}
 	}
 	h2 {font-size: 24px !important;}
 	.closeRelease {width:26px;position:absolute;margin:20px 0px 0px 47%;z-index:1000;}
-	#releaseShowWrapper {height:610px;padding-top:-10px;}
 	
 }
 
@@ -1590,7 +1589,6 @@ footer { width: 100%; background: #060606;}
 	}
 	h2 {font-size: 20px !important;}
 	.closeRelease {width:26px;position:absolute;margin:20px 0px 0px 46.5%;z-index:1000;}
-	#releaseShowWrapper {height:780px;padding-top:-10px;}
 }
 
 

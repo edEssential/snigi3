@@ -46,9 +46,8 @@ jQuery(document).ready(function() {
 			success: function(data) {
 				var release_content = SMT['releaseshow'](data);
 				jQuery(window).scrollTo('#section2', {duration:200, offset:45});
-				jQuery('#releaseShowWrapper').show(function(){
-					jQuery('#releaseShowContent').empty().hide().append(release_content).fadeIn(700);
-				});
+				jQuery('#releaseShowWrapper').fadeIn(750);
+				jQuery('#releaseShowContent').empty().hide().append(release_content).fadeIn(750);
 			}
 		});
 	});
