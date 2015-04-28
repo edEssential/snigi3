@@ -8,8 +8,9 @@ class ContactMailer < ActionMailer::Base
   end
   
   def initiate_admin(contact)
+    @to = "anna_carter@hotmail.com"
     @contact = contact
-    mail(from: @contact.email, to: "anna_carter@hotmail.com", bcc: "ed_hamilton@live.com", subject: "New message from the website!")
+    mail(from: @contact.email, to: @to, bcc: "ed_hamilton@live.com", subject: "New message from the website!")
   end
   
   def contacts_xls(contacts, user)
