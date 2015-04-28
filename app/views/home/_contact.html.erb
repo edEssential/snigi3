@@ -11,23 +11,27 @@
 			<% end %>
 			<span class="border"></span>
 		</div>
-		
 		<div class="contactFormWrapper">
+			<br/><br/>
+			<a href="mailto:anna_carter@hotmail.com?Subject=Hi%20Anna!%20">
+				<i class="fa fa-envelope-o fa-3x"></i>
+				<p class="contactDeets">anna_carter(at)hotmail(dot)com</p>
+			</a>
 		
-			<div class="grid-full contactForm" id="commentForm">	
-				<%= form_for(@contact, remote: true, :id => "contactForm") do |f| %>
+			<!--<div class="grid-full contactForm" id="commentForm">	
+				<%#= form_for(@contact, remote: true, :id => "contactForm") do |f| %>
 					<div class="contactEmail grid-half">
-		    			<%= f.text_field :email, :placeholder => 'Your E-mail', :class => "contactField", :id => "email", :name => "email" %><br /><br />
+		    			<%#= f.text_field :email, :placeholder => 'Your E-mail', :class => "contactField", :id => "email", :name => "email" %><br /><br />
 					</div>
 					<div class="contactName grid-half">
-		    			<%= f.text_field :name, :placeholder => 'Your Name', :class => "contactField" %><br /><br />
+		    			<%#= f.text_field :name, :placeholder => 'Your Name', :class => "contactField" %><br /><br />
 					</div>
 					<div class="contactMessage grid-full">
-		    			<%= f.text_area :user_message, :placeholder => 'Message', :class => "contactFieldArea" %><br /><br />
+		    			<%#= f.text_area :user_message, :placeholder => 'Message', :class => "contactFieldArea" %><br /><br />
 					</div>
-		    		<div class="grid-full"><%= f.submit "Send message", class: "button4 submit", id: "contact-submit" %></div>
-				<% end %>
-			</div>
+		    		<div class="grid-full"><%#= f.submit "Send message", class: "button4 submit", id: "contact-submit" %></div>
+				<%# end %>
+			</div>-->
 			
 		</div>
 		

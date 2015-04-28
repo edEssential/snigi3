@@ -14,6 +14,7 @@ gem 'uglifier', '>= 1.0.3'
 gem 'jquery-rails', '2.1.3'
 gem 'smt_rails', :git => 'git://github.com/railsware/smt_rails.git'
 gem 'exception_notification'
+gem "font-awesome-rails"
 
 group :development, :test do
   gem 'sqlite3'
