@@ -14,6 +14,8 @@
 //= require jquery_ujs
 //= require mustache
 //= require_tree ../../templates
+//= require validation
+//= require validation_methods
 
 jQuery(document).ready(function() {
 	
@@ -59,13 +61,17 @@ jQuery(document).ready(function() {
 		});
 	});
 	
-	//// Contact form submission and callback
-	jQuery( "#contact-submit" ).click(function() {
-		jQuery(".contactTitle").fadeOut(500, function() {
-			jQuery(this).html("Thanks for getting in touch!").fadeIn(1000);
-			jQuery(".contactForm").empty().append("<h3>I'll get back to you soon</h3>");
-			document.getElementById('contactHeader').scrollIntoView(true);
-		 });
+	jQuery.validator.setDefaults({
+	  debug: true,
+	  success: "valid"
+	});
+	jQuery("#contactForm").validate({
+	  rules: {
+	    email: {
+	      required: true,
+	      email: true
+	    }
+	  }
 	});
 	
 });

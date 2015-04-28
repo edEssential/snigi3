@@ -15,9 +15,9 @@
 		<div class="contactFormWrapper">
 		
 			<div class="grid-full contactForm" id="commentForm">	
-				<%= form_for(@contact, remote: true) do |f| %>
+				<%= form_for(@contact, remote: true, :id => "contactForm") do |f| %>
 					<div class="contactEmail grid-half">
-		    			<%= f.text_field :email, :placeholder => 'Your E-mail', :class => "contactField" %><br /><br />
+		    			<%= f.text_field :email, :placeholder => 'Your E-mail', :class => "contactField", :id => "email", :name => "email" %><br /><br />
 					</div>
 					<div class="contactName grid-half">
 		    			<%= f.text_field :name, :placeholder => 'Your Name', :class => "contactField" %><br /><br />
