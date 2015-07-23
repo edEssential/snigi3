@@ -201,7 +201,7 @@ a, a:visited { font-weight: 400; text-decoration: none; }
 .product {width:33.33%!important;margin:-80px auto 80px auto;}
 .productImg {width:80%;margin:0 3% 50px 0.07%;}
 .productImg img {max-width:100%;}
-.productDetails h5 {margin:0px auto 0px auto!important;font-size:12px!important;}
+.productDetails h5 {margin:5px auto 0px auto!important;font-size:12px!important;}
 .productDetails h4 {margin:-12px auto 0px auto;}
 .productDetails {margin-bottom:50px;}
 
