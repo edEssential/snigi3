@@ -203,6 +203,11 @@ a, a:visited { font-weight: 400; text-decoration: none; }
 .productImg img {max-width:100%;}
 .productDetails h5 {margin:6px;}
 .productDetails h4 {margin:-12px auto 18px auto;}
+.productDetails {margin-bottom:50px;}
+
+@media only screen and (max-width:779px) {
+	.product {width:100%!important;}
+}
 
 /* Parallax Fix */
 @media only screen and (min-width: 1930px) { .parallax { background-size: cover; } }
