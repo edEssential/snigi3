@@ -1,5 +1,9 @@
 <!-- Begin Videos -->
-<section id="section3" class="parallax-bg2 parallax colored clearfix">
+<% if @products.count > 0 %>
+	<section id="section4" class="parallax-bg2 parallax colored clearfix">
+<% else %>
+	<section id="section3" class="parallax-bg2 parallax colored clearfix">
+<% end %>
 	<div class="content dark padded container">
 
 		<!-- Text -->

@@ -1,0 +1,65 @@
+<!-- Begin Portfolio -->
+<section id="section3" class="portfolio clearfix">
+
+	<!-- Title -->
+	<div class="content container">
+		<div class="title grid-full">
+			<h2 id="releaseHeader">Shop</h2>
+			<span class="border"></span>
+		</div>
+	</div>
+
+	<!-- Thumbnails -->
+	<ul id="portfolio-grid" class="projectlist clearfix content container">
+		<% @products.each do |p| %>
+			<li class="product">
+				<%= image_tag(p.packshot(:medium), :class => "productImg") %>
+				<div class="productDetails">
+					<% if p.title == 'Moon Ate The Dark I & II' && p.format == "Vinyl" %>
+						<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+						<input type="hidden" name="cmd" value="_s-xclick">
+						<input type="hidden" name="hosted_button_id" value="ND6Z4M46ULT3A">
+						<input type="hidden" name="on0" value="Moon Ate The Dark I & II (Vinyl)"><h4>Moon Ate The Dark I & II (Vinyl)</h4><select name="os0">
+							<option value="UK (inc. postage)">UK (inc. postage) £24.00 GBP</option>
+							<option value="Europe (inc. postage)">Europe (inc. postage) £27.00 GBP</option>
+						</select>
+						<br/><br/>
+						<input type="hidden" name="currency_code" value="GBP">
+						<input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
+						<img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+						</form>
+					<% elsif p.title == 'Moon Ate The Dark I & II' && p.format == 'CD' %>
+						<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+						<input type="hidden" name="cmd" value="_s-xclick">
+						<input type="hidden" name="hosted_button_id" value="C93C7XGR2P7B4">
+						<input type="hidden" name="on0" value="Moon Ate The Dark I & II (CD)"><h4>Moon Ate The Dark I & II (CD)</h4><select name="os0">
+							<option value="UK (inc. postage)">UK (inc. postage) £18.00 GBP</option>
+							<option value="Europe (inc. postage)">Europe (inc. postage) £20.00 GBP</option>
+						</select>
+						<br/><br/>
+						<input type="hidden" name="currency_code" value="GBP">
+						<input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
+						<img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+						</form>
+					<% elsif p.title == "Moon Ate The Dark II" && p.format == "CD" %>
+						<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+						<input type="hidden" name="cmd" value="_s-xclick">
+						<input type="hidden" name="hosted_button_id" value="LSWE2B4XJNYQ4">
+						<input type="hidden" name="on0" value="Moon Ate The Dark II (CD)"><h4>Moon Ate The Dark II (CD)</h4><select name="os0">
+							<option value="UK (inc. postage)">UK (inc. postage) £17.00 GBP</option>
+							<option value="Europe (inc. postage)">Europe (inc. postage) £19.00 GBP</option>
+						</select>
+						<br/><br/>
+						<input type="hidden" name="currency_code" value="GBP">
+						<input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
+						<img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+						</form>
+					<% end %>
+				</div>
+			</li>
+		<% end %>
+	</ul>
+
+
+</section>
+<!-- End Portfolio -->

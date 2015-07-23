@@ -198,6 +198,11 @@ a, a:visited { font-weight: 400; text-decoration: none; }
 	background-attachment: fixed;
 	background-position: 50% 0;
 }
+.product {width:33.33%!important;margin:-80px auto 80px auto;}
+.productImg {width:80%;margin:0 3% 50px 0.07%;}
+.productImg img {max-width:100%;}
+.productDetails h5 {margin:6px;}
+.productDetails h4 {margin:-12px auto 18px auto;}
 
 /* Parallax Fix */
 @media only screen and (min-width: 1930px) { .parallax { background-size: cover; } }
@@ -1457,6 +1462,12 @@ footer { width: 100%; background: #060606;}
 	.bx-prev { left: -250px; }
 	#nextProject { right: -250px; }
 	#prevProject { left: -250px; }
+
+}
+
+@media only screen and (max-width : 994px) {
+	
+	.productImg {width:60%;margin:0 20% 50px 20%;}
 
 }
 

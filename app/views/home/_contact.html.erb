@@ -1,5 +1,9 @@
 <!-- Begin Clients -->
-<section id="section5" class="black clearfix contactBlack">
+<% if @products.count > 0 %>
+	<section id="section6" class="black clearfix contactBlack">
+<% else %>
+	<section id="section5" class="black clearfix contactBlack">
+<% end %>
 	<div class="content dark padded container">
 
 		<!-- Title -->

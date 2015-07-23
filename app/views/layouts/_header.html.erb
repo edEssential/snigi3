@@ -17,9 +17,16 @@
     	<div class="navigation">
 			<ul class="nav-content">
 				<li><a href="#section2">Releases</a></li>
-				<li><a href="#section3">Videos</a></li>
-				<li><a href="#section4">Shows</a></li>
-				<li><a href="#section5">Contact</a></li>
+				<% if @products.count > 0 %>
+					<li><a href="#section3">Shop</a></li>
+					<li><a href="#section4">Videos</a></li>
+					<li><a href="#section5">Shows</a></li>
+					<li><a href="#section6">Contact</a></li>
+				<% else %>
+					<li><a href="#section3">Videos</a></li>
+					<li><a href="#section4">Shows</a></li>
+					<li><a href="#section5">Contact</a></li>
+				<% end %>
 			</ul>
 		</div>
 	<% if user_signed_in? %>

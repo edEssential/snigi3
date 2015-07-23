@@ -1,5 +1,9 @@
 <!-- Begin Shows -->
-<section id="section4" class="content container">
+<% if @products.count > 0 %>
+	<section id="section5" class="content container">
+<% else %>
+	<section id="section4" class="content container">
+<% end %>
 	<div class="title grid-full">
 		<h2>Shows</h2>
 		<span class="border"></span>

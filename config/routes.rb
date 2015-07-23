@@ -7,6 +7,7 @@ Snigiv3::Application.routes.draw do
   match 'releases/release_show_via_ajax_call' => 'releases#release_show_via_ajax_call'
   
   resources :releases
+  resources :products
   resources :videos
   resources :shows
   resources :info

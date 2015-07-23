@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150428082117) do
+ActiveRecord::Schema.define(:version => 20150715152106) do
 
   create_table "contacts", :force => true do |t|
     t.string   "name"
@@ -21,6 +21,21 @@ ActiveRecord::Schema.define(:version => 20150428082117) do
     t.string   "thanks_text"
     t.datetime "created_at",                  :null => false
     t.datetime "updated_at",                  :null => false
+  end
+
+  create_table "products", :force => true do |t|
+    t.string   "artist"
+    t.string   "title"
+    t.text     "description"
+    t.string   "review_1"
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
+    t.string   "packshot_file_name"
+    t.string   "packshot_content_type"
+    t.integer  "packshot_file_size"
+    t.datetime "packshot_updated_at"
+    t.string   "format"
+    t.string   "price"
   end
 
   create_table "releases", :force => true do |t|
